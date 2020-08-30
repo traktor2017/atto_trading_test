@@ -1,0 +1,19 @@
+<div class="order-book">
+    <h3 class="order-book__title pt-2 pb-4">{{fondName}}</h3>
+    <div class="order-book__contant-wrapper">
+        <div class="order-book__sell">
+            <div class ="order-book__item order-book__item--sell" *ngFor="let item of orderBookSellArray">
+                <p class="order-book__item-text">{{item.Shares}}</p>
+                <p class="order-book__item-text">{{item.Price}}</p> 
+                <p class="order-book__item-text">{{item.OrderID}}</p>
+            </div>
+        </div>
+        <div class="order-book__buy">
+            <div class="order-book__item order-book__item--buy" *ngFor="let item of orderBookBuyArray">
+                <p class="order-book__item-text">{{item.OrderID}}</p>
+                <p class="order-book__item-text">{{item.Shares}}</p>
+                <p class="order-book__item-text">{{item.Price}}</p> 
+            </div>
+        </div>
+    </div>
+</div>
